@@ -25,3 +25,6 @@
 [submodule "bundle/vimwiki"]
 	path = bundle/vimwiki
 	url = git@github.com:junkilee/vimwiki.git
+[submodule "bundle/vim-system-copy"]
+	path = bundle/vim-system-copy
+	url = https://github.com/christoomey/vim-system-copy.git
