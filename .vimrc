@@ -50,7 +50,7 @@ set ignorecase         " Do case insensitive matching
 set smartcase          " Do smart case matching
 set incsearch          " Incremental search
 set autowrite          " Automatically save before commands like :next and :make
-set hidden             " Hide buffers when they are abandoned
+"set hidden             " Hide buffers when they are abandoned
                        " This allow you not to save file each time and
                        " navigate
 set confirm            " Prompts to save or cancel
@@ -96,7 +96,7 @@ set number
 let g:tmuxline_powerline_separators = 0
 
 map <C-n> :NERDTreeToggle<CR>
-let NERDTreeIgnore = ['\.pyc$', '\.swp$']
+let NERDTreeIgnore = ['\.pyc$', '\.swp$', '__pycache__$[[dir]]']
 
 if &term =~ '^screen' || &term =~ '^xterm'
   set t_Co=256
@@ -118,11 +118,10 @@ let wiki = {}
 let wiki.path = '~/jklee_wiki/'
 let wiki.syntax = 'markdown'
 let wiki.ext = '.md'
-let wiki.nested_syntaxes = {'python': 'python', 'c++': 'cpp'}
+let wiki.nested_syntaxes = {'python': 'python', 'java': 'java', 'c++': 'cpp'}
 let g:vimwiki_list = [wiki]
-let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
+let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown', '.wiki': 'default'}
 let g:vimwiki_folding='expr' " '', 'expr', 'syntax', 'list'
-let wiki.nested_syntaxes = {'python': 'python', 'sh': 'sh'}
 
 " Calendar
 let g:calendar_google_calendar=1
