@@ -3,12 +3,7 @@
 "
 set nocompatible
 
-" For disabling any bundle in pathogen
-"let g:pathogen_disabled = []
-"call add(g:pathogen_disabled, 'jedi-vim')
-
-execute pathogen#infect()
-Helptags
+helptags ALL
 
 filetype plugin indent on
 
